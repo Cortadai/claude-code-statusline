@@ -116,8 +116,9 @@ try {
     $data = $inputJson | ConvertFrom-Json
 
     # ── Line 1 ──────────────────────────────────────────────────────────────
-    # Model and effort
+    # Model, without the "(1M context)" suffix, and effort
     $model = if ($data.model.display_name) { $data.model.display_name } else { "Claude" }
+    $model = ($model -replace '\s*\([^)]*context\)', '').Trim()
     $modelText = Color ((Icon model) + $model) $colors.mauve
     if ($data.effort.level) { $modelText += $dot + (Color ((Icon effort) + $data.effort.level) $colors.lavender) }
     $line1 += $modelText

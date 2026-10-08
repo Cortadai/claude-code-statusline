@@ -7,23 +7,23 @@ Tres status lines para [Claude Code](https://code.claude.com) en PowerShell, con
 ### v1 · original
 Una fila, sin iconos. Funciona con Windows PowerShell 5.1.
 ```
-Opus 5.5 (1M context) | [█░░░░░░░░░] 18% | 180k/1000k | git:main* | mods | entelgy - team 5x
+Opus 5.5 (1M context) | [█░░░░░░░░░] 18% | 180k/1000k | git:main* | my-project | acme - team 5x
 ```
 
 ### v2 · caja
 Dos filas dentro de una caja con borde arcoíris, con todo visible siempre: límites 5h/7d con barra de previsión, caché, coste, duración y líneas cambiadas. Necesita **PowerShell 7** y una **Nerd Font**. Detalle de cada elemento en [`v2-box/CHULETA.md`](v2-box/CHULETA.md).
 ```
-╭──────────────────────────────────────────────────────────────────────────────────────────────╮
-│ 󰚩 Opus 5.5 · 󰊚 high │ 󰉋 mods │ 󰀄 entelgy · team 5x │ 󰇁 1.42 · 󰅐 37m · 󰦒 +156 −23              │
-├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤
-│ 󰆼 [██░░░░░░░░] 18% 180k/1000k │ 󰔟 5h [███▓▓░░░░░] 23% 󰑐 2h08 │ 󰃭 7d [█████▓▓▓▓░] 41% 󰑐 dom 21:45 │ 󱐋 52m │
-╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 󰚩 Opus 5.5 · 󰊚 high │ 󰉋 my-project │ 󰀄 personal · max 5x │ 󰇁 1.42 · 󰅐 37m · 󰦒 +156 −23               │
+├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┤
+│ 󰆼 [██░░░░░░░░] 18% 180k/1000k │ 󰔟 5h ━━━━━───── 23% 󰑐 2h08 │ 󰃭 7d ━━━━━━━━━─ 41% 󰑐 lun 02:26 │ 󱐋 53m │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ### v3 · compacta
 La v1 con iconos y los límites de la v2, pero tranquila: una fila, y los avisos solo aparecen cuando hacen falta. Funciona con Windows PowerShell 5.1; necesita una **Nerd Font** (o `$UseIcons = $false`).
 ```
-Normal:    󰚩 Opus 5.5 · 󰊚 high | 󰆼 [█░░░░░░░░░] 18% | 180k/1000k | 󰉋 mods | 󰀄 entelgy - team 5x | 󰔟 5h 23%
+Normal:    󰚩 Opus 5.5 · 󰊚 high | 󰆼 [█░░░░░░░░░] 18% | 180k/1000k | 󰉋 my-project | 󰀄 acme - team 5x | 󰔟 5h 23%
 Apretado:  … | 550k/1000k 󰀦 | … | 󰔟 5h 82% 󰀦 󰑐 1h39 | 󰃭 7d 61%
 Café:      … | 󰔟 5h 30% | 󰃭 7d 52% | 󰜗 fría (relee 380k)
 ```

@@ -36,13 +36,15 @@ function Session($ctx, $fiveUsed, $fiveLeft, $weekUsed, $weekLeft, $cacheLeft, $
     $s | ConvertTo-Json -Depth 5
 }
 
-$mods = "C:\Users\dcortaberria\Desktop\sandbox\mods"
+# A plain folder (not a git repo) for the other scenarios
+$project = Join-Path $env:TEMP "my-project"
+New-Item -ItemType Directory -Force $project | Out-Null
 $scenarios = [ordered]@{
-    "1. Recien abierta (aun sin limites)"            = Session 6 $null 0 0 0 0 $mods
-    "2. Dia normal"                                  = Session 18 23 7700 41 300000 3100 $mods
+    "1. Recien abierta (aun sin limites)"            = Session 6 $null 0 0 0 0 $project
+    "2. Dia normal"                                  = Session 18 23 7700 41 300000 3100 $project
     "3. Repo git con cambios"                         = Session 32 40 9000 45 200000 200 $repo
-    "4. Dia apretado (5h al ritmo de pasarse)"       = Session 55 82 6000 61 100000 2400 $mods
-    "5. Vuelves del cafe (cache fria)"               = Session 38 30 12000 52 250000 0 $mods
+    "4. Dia apretado (5h al ritmo de pasarse)"       = Session 55 82 6000 61 100000 2400 $project
+    "5. Vuelves del cafe (cache fria)"               = Session 38 30 12000 52 250000 0 $project
 }
 
 foreach ($name in $scenarios.Keys) {
