@@ -38,6 +38,16 @@ Café:      … | 󰔟 5h 30% | 󰃭 7d 52% | 󰜗 fría (relee 380k)
 
 Colores de barras y porcentajes: verde < 25 % · teal < 50 % · amarillo < 75 % · melocotón < 90 % · rojo.
 
+## Instalación
+
+```powershell
+git clone https://github.com/Cortadai/claude-code-statusline.git $env:USERPROFILE\repos\claude-code-statusline
+cd $env:USERPROFILE\repos\claude-code-statusline
+.\switch.ps1 v2
+```
+
+Deja el clon donde está: `settings.json` apunta a los scripts de esta carpeta.
+
 ## Uso
 
 ```powershell
