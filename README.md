@@ -7,7 +7,7 @@ Tres status lines para [Claude Code](https://code.claude.com) en PowerShell, con
 ### v1 · original
 Una fila, sin iconos. Funciona con Windows PowerShell 5.1.
 ```
-Opus 5.5 (1M context) | [█░░░░░░░░░] 18% | 180k/1000k | git:main* | my-project | acme - team 5x
+Opus 5.5 (1M context) | [█░░░░░░░░░] 18% | 180k/1000k | my-project | git:main* | acme - team 5x
 ```
 
 ### v2 · caja
@@ -78,3 +78,4 @@ Al principio de cada script:
 | `$WeekThreshold` | | 50 | % desde el que se muestra el 7d |
 | `$UseIcons` | ✓ | ✓ | `$false` = etiquetas de texto en lugar de iconos |
 | `$UseBox`, `$RainbowBox`, `$RainbowDim`, `$RowSeparator` | ✓ | | Caja, degradado, atenuado y separador entre filas |
+| `$ThinLimitBars` | ✓ | | 5h y 7d como línea fina (`━━──`) en vez de barra maciza, para que el contexto sea la única barra llamativa |
